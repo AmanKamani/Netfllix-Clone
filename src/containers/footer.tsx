@@ -2,7 +2,8 @@ import React from "react";
 import { Footer } from "../components";
 
 const FooterContainer = () => {
-    return (<Footer>
+    return (
+    <Footer>
         <Footer.Title>Questions? Contact us.</Footer.Title>
         <Footer.Break />
         <Footer.Row>

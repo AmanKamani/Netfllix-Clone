@@ -21,8 +21,9 @@ Footer.Column = ({children, ...otherProps}: PropsWithChildren) => {
     </Column>);
 }
 
-Footer.Link = ({children, ...otherProps}: PropsWithChildren<any>) => {
-    return (<Link {...otherProps}>
+Footer.Link = ({children, ...otherProps}: PropsWithChildren<React.HTMLProps<HTMLAnchorElement>>) => {
+    return (
+    <Link {...otherProps}>
         {children}
     </Link>);
 }
