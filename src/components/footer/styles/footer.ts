@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { COMPONENT_MAX_WIDTH } from "../../../utils/style-constants";
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 1100px;
+    max-width: ${COMPONENT_MAX_WIDTH};
     margin: auto;
     width: 100%;
 

@@ -1,29 +1,24 @@
 import styled from "styled-components";
+import { COMPONENT_MAX_WIDTH, COMPONENT_SEPERATOR_BORDER_BOTTOM } from "../../../utils/style-constants";
+
+const BACKGROUND_COLOR = '#303030';
 
 export const Container = styled.div`
-    border-bottom: 8px solid #222;
+    border-bottom: ${COMPONENT_SEPERATOR_BORDER_BOTTOM};
 `;
 
 export const Inner = styled.div`
     display: flex;
     flex-direction: column;
-    flex-direction: column;
-    max-width: 1100px;
+    max-width: ${COMPONENT_MAX_WIDTH};
     margin: auto;
     padding: 70px 45px;
 `
 
 export const Title = styled.h1`
-    font-size: 50px;
-    line-height: 1.1;
     margin-top: 0;
-    margin-bottom: 8px;
     color: white;
     text-align: center;
-
-    @media (max-width: 600px) {
-        font-size: 35px;
-    }
 `;
 
 export const Item = styled.div`
@@ -43,7 +38,7 @@ export const Header = styled.div`
     margin-bottom: 1px;
     font-size: 26px;
     font-weight: normal;
-    background: #303030;
+    background: ${BACKGROUND_COLOR};
     padding: 0.8em 1.2em;
 
     cursor: pointer;
@@ -71,7 +66,7 @@ export const Body = styled.div`
     font-weight: normal;
     line-height: normal;
     
-    background: #303030;
+    background: ${BACKGROUND_COLOR};
     
     padding: 0.8em 1.2em;
     white-space: pre-wrap;

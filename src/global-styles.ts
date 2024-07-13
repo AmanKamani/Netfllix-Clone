@@ -9,5 +9,15 @@ export const GlobalStyles = createGlobalStyle`
         color: #333333;
         font-size: 16px;
     }
+
+    h1 {
+        font-size: 50px;
+        line-height: 1.1;
+        margin-bottom: 8px;
+
+        @media (max-width: 600px) {
+            font-size: 35px;
+        }
+    }
 `;
 

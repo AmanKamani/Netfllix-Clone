@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { COMPONENT_MAX_WIDTH, COMPONENT_SEPERATOR_BORDER_BOTTOM } from "../../../utils/style-constants";
 
 
 export const Item = styled.div`
     display: flex;
     padding: 50px 5%;
-    border-bottom: 8px solid #222;
+    border-bottom: ${COMPONENT_SEPERATOR_BORDER_BOTTOM};
     overflow: hidden;
     color: white;
 `;
@@ -15,7 +16,7 @@ export const Inner = styled.div<{direction: string}>`
     align-items: center;
     justify-content: space-between;
     margin: auto; // auto works with max-width. So that div will be in center
-    max-width: 1100px;
+    max-width: ${COMPONENT_MAX_WIDTH};
     width: 100%;
 
     @media (max-width: 1000px) {
