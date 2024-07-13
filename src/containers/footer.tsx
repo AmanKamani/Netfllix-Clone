@@ -12,7 +12,7 @@ const FooterContainer = () => {
                 <Footer.Link href="#">Investor Relations</Footer.Link>
                 <Footer.Link href="#">Ways to Watch</Footer.Link>
                 <Footer.Link href="#">Coporate Information</Footer.Link>
-                <Footer.Link href="#">Netflix Original</Footer.Link>
+                <Footer.Link href="#">Netfllix Original</Footer.Link>
             </Footer.Column>
 
             <Footer.Column>
