@@ -30,7 +30,7 @@ export const Inner = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 10rem;
+    width: 8rem;
     height: auto;
     margin-right: 40px;
 
@@ -47,10 +47,15 @@ export const Nav = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 50px;
     width: 100%;
-    padding: 0 50px 0 50px;
     box-sizing: border-box;
+
+    @media (max-width: 1150px) {
+        padding: 0 50px 0 50px;
+
+    }
 `;
 
 export const NavPartition = styled.div<NavPartitionStyledProps>`
@@ -65,12 +70,12 @@ export const NavPartition = styled.div<NavPartitionStyledProps>`
 export const ButtonLink = styled(Link)`
     display: block;
     background-color: #e50914;
-    width: 84px;
+    width: fit-content;
     height: fit-content;
     text-align: center;
     color: white;
     border: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     border-radius: 3px;
     padding: 8px 17px;
     cursor: pointer;
