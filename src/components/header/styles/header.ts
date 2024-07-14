@@ -11,7 +11,7 @@ export type NavPartitionStyledProps = {
 }
 
 export const Container = styled.div<ContainerProps>`
-    background-image: linear-gradient(135deg, #212121 0%, rgba(0, 0, 0, 0.6) 10%), url(${(props) => props.backgroundImage || '../images/misc/home-bg.jpg'});
+    background-image: linear-gradient(135deg, #212121 0%, rgba(0, 0, 0, 0.2) 10%), url(${(props) => props.backgroundImage || '../images/misc/home-bg.jpg'});
 
     background-position-x: left;
     background-position-y: top;
