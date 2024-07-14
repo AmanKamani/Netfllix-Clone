@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const INPUT_HEIGHT = '60px';
+
 export const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -16,16 +18,23 @@ export const Container = styled.div`
 export const Input = styled.input`
     max-width: 450px;
     width: 100%;
-    border: 0;
+    border: 1px solid white;
     padding: 10px;
-    height: 70px;
+    height: ${INPUT_HEIGHT};
     box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+
+    &::placeholder {
+        color: grey;
+    }
 `;
 
 export const Button = styled.button`
     display: flex;
     align-items: center;
-    height: 70px;
+    height: ${INPUT_HEIGHT};
     background: #e50914;
     color: white;
     text-transform: uppercase;
