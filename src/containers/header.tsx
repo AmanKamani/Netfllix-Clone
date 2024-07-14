@@ -10,7 +10,7 @@ export const HeaderContainer = ({children}: PropsWithChildren) => {
                 <Header.Logo src="/images/netfllix.png" alt="Netfllix" />
             </Header.NavPartition>
             <Header.NavPartition>
-                <Header.ButtonLink to={ROUTES.HOME}>Sign In</Header.ButtonLink>
+                <Header.ButtonLink to={ROUTES.SignIn}>Sign In</Header.ButtonLink>
             </Header.NavPartition>
         </Header.NavBar>
 
