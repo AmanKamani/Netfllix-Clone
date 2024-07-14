@@ -1,19 +1,38 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Form } from "../components";
 import FooterContainer from "../containers/footer";
 import { HeaderContainer } from "../containers/header";
+import { useFirebaseContext } from "../context/firebase";
 import { ROUTES } from "../utils/constants";
 
 const SignIn = () => {
+    const firebase = useFirebaseContext();
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error] = useState('');
+    const [error, setError] = useState('');
 
-    const isInvalid = !!email || !!password;
+    const isInvalid = !email || !password;
 
-    const handleSignIn = (e: FormEvent<HTMLFormElement>) => {
+    const handleSignIn = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        try {
+            const response = await firebase.auth()
+            .signInWithEmailAndPassword(email,  password);
+            console.log(response.user);
+            
+            navigate(ROUTES.Browse);
+        } catch(error: any) {
+            setError(error!.message);
+            setEmail('');
+            setPassword('');
+            console.log(error);
+        } 
     }
+
+
 
     return <>
         <HeaderContainer>
@@ -21,7 +40,9 @@ const SignIn = () => {
                 <Form.Title>Sign In</Form.Title>
                 { error && <Form.Error>{error}</Form.Error>}
                 <Form.Base onSubmit={handleSignIn} method="POST">
-                    <Form.Input 
+                    
+                    <Form.Input
+                        type="email"
                         placeholder="Email Address"
                         value={email}
                         onChange={({target}) => setEmail(target.value)}
